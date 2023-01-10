@@ -1,0 +1,37 @@
+{
+  "korisnici": [
+    {
+      "id": 1,
+      "ime": "Jovica",
+      "prezime": "Ristic",
+      "email": "jocaristic5@gmail.com",
+      "lozinka": "123456789",
+      "role": "admin"
+    }
+  ],
+  "telefoni": [
+    {
+      "id": 1,
+      "brend": "Samsung",
+      "model": "Galaxy S21 Ultra",
+      "dijagonala_ekrana": "6.8",
+      "ram": "12 GB",
+      "memorija": "do 128 GB",
+      "kamera": "108+10+12 MP + 10MP / 40 MP",
+      "baterija": "5000 mAh",
+      "rezolucija": "3200x1440",
+      "cena": "119.999",
+      "slika": "https://images.prismic.io/esis/ed9d3435-006a-4998-81b7-1801894c0c4f_SM-G998BZKHEUC.png?auto=compress,format&rect=0,0,800,600&w=800&h=600"
+    }
+  ],
+  "porudzbine": [
+    {
+      "id": 1,
+      "korisnik_id": 1,
+      "telefon_id": 1,
+      "adresa_dostave": "Leskovac",
+      "postanski_broj": 16000,
+      "broj_telefona": "064324324"
+    }
+  ]
+}
