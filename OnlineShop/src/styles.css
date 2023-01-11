@@ -10,3 +10,23 @@
 body{
     background-color: rgb(230, 230, 230);
 }
+
+.forma {
+    background-color: #dfdfdf;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+h1::after{
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 100px;
+    background-color: black;
+    margin: 8px auto 30px;
+}
+
+.error-msg{
+    color: crimson;
+    font-size: 14px;
+}

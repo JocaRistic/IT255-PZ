@@ -1,0 +1,54 @@
+<section id="registracija" class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Registruj se</h1>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 forma">
+                <form [formGroup]="registerForma" (ngSubmit)="registrujSe()">
+                    <div class="mb-3">
+                        <label for="ime" class="form-label">Unesite ime</label>
+                        <input type="text" class="form-control" id="ime" name="ime" formControlName="ime" [class.is-invalid]="registerForma.controls['ime'].invalid && registerForma.controls['ime'].touched">
+                        <div *ngIf="registerForma.controls['ime'].invalid && registerForma.controls['ime'].touched" class="error-msg">
+                            <div *ngIf="$any(registerForma.controls['ime']).errors.invalidImePrezime">
+                                Ime nije validno (min 3 slova)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prezime" class="form-label">Unesite prezime</label>
+                        <input type="text" class="form-control" id="prezime" name="prezime" formControlName="prezime" [class.is-invalid]="registerForma.controls['prezime'].invalid && registerForma.controls['prezime'].touched">
+                        <div *ngIf="registerForma.controls['prezime'].invalid && registerForma.controls['prezime'].touched" class="error-msg">
+                            <div *ngIf="$any(registerForma.controls['prezime']).errors.invalidImePrezime">
+                                Prezime nije validno (min 3 slova)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Unesite email</label>
+                        <input type="email" class="form-control" id="email" name="email" formControlName="email" [class.is-invalid]="registerForma.controls['email'].invalid && registerForma.controls['email'].touched">
+                        <div *ngIf="registerForma.controls['email'].invalid && registerForma.controls['email'].touched" class="error-msg">
+                            <div *ngIf="$any(registerForma.controls['email']).errors.invalidEmail">
+                                Email nije validan
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lozinka" class="form-label">Unesite lozinku</label>
+                        <input type="password" class="form-control" id="lozinka" name="lozinka" formControlName="lozinka" [class.is-invalid]="registerForma.controls['lozinka'].invalid && registerForma.controls['lozinka'].touched">
+                        <div *ngIf="registerForma.controls['lozinka'].invalid && registerForma.controls['lozinka'].touched" class="error-msg">
+                            <div *ngIf="$any(registerForma.controls['lozinka']).errors.minlength || 
+                            $any(registerForma.controls['lozinka']).errors.required">
+                                Lozinka mora biti bar 6 karaktera
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" [disabled]="!registerForma.valid">Registruj se</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</section>
+

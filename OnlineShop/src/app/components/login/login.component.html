@@ -1,1 +1,43 @@
-<p>login works!</p>
+<section id="login" class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Prijavi se</h1>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 forma">
+                <form [formGroup]="loginForma" (ngSubmit)="ulogujSe()">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Unesite email</label>
+                        <input type="email" class="form-control" id="email" name="email" formControlName="email" [class.is-invalid]="loginForma.controls['email'].invalid && loginForma.controls['email'].touched">
+                        <div *ngIf="loginForma.controls['email'].invalid && loginForma.controls['email'].touched" class="error-msg">
+                            <div *ngIf="$any(loginForma.controls['email']).errors.invalidEmail">
+                                Email nije validan
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lozinka" class="form-label">Unesite lozinku</label>
+                        <input type="password" class="form-control" id="lozinka" name="lozinka" formControlName="lozinka" [class.is-invalid]="loginForma.controls['lozinka'].invalid && loginForma.controls['lozinka'].touched">
+                        <div *ngIf="loginForma.controls['lozinka'].invalid && loginForma.controls['lozinka'].touched" class="error-msg">
+                            <div *ngIf="$any(loginForma.controls['lozinka']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>    
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" [disabled]="!loginForma.valid">Login</button>
+                    </div>
+                    <div class="row py-2 text-center">
+                        <p style="margin-bottom: 0px;">
+                            Nemate nalog? 
+                            <span>
+                                <a class="text-danger" style="text-decoration: none;" 
+                                [routerLink]="['/register']">Registrujte se</a>
+                            </span>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</section>

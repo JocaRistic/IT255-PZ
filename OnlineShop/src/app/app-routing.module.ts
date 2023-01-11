@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { PocetnaComponent } from './components/pocetna/pocetna.component';
 import { PonudaComponent } from './components/ponuda/ponuda.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'pocetna', pathMatch:'full'},
   {path: 'pocetna', component: PocetnaComponent},
   {path: 'ponuda', component: PonudaComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
