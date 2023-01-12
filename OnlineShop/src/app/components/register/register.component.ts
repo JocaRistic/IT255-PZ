@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 import { emailValidator, imePrezimeValidator } from 'src/app/validators/validators';
 
 @Component({
@@ -11,9 +12,7 @@ export class RegisterComponent implements OnInit {
   
   registerForma: FormGroup;
 
-  constructor(private fb: FormBuilder){
-
-  }
+  constructor(private fb: FormBuilder, private _authService: AuthService){}
 
   ngOnInit(): void {
     this.createRegisterForm();
@@ -29,8 +28,12 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  //funkcija za registraciju
+  //funkcija za registraciju poziva funkciju servisa authService i prosledjuje joj argumente
   registrujSe(){
-    console.log(this.registerForma.value)
+    const ime = this.registerForma.controls['ime'].value;
+    const prezime = this.registerForma.controls['prezime'].value;
+    const email = this.registerForma.controls['email'].value;
+    const lozinka = this.registerForma.controls['lozinka'].value;
+    this._authService.register(ime, prezime, email, lozinka);
   }
 }

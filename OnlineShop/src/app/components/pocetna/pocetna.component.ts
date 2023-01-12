@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './pocetna.component.html',
   styleUrls: ['./pocetna.component.css']
 })
-export class PocetnaComponent {
+export class PocetnaComponent{
+
+  constructor() {
+    
+  }
+
 
 }

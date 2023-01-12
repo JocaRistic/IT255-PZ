@@ -7,6 +7,22 @@
       "email": "jocaristic5@gmail.com",
       "lozinka": "123456789",
       "role": "admin"
+    },
+    {
+      "ime": "Aleksandra",
+      "prezime": "Ristic",
+      "email": "ana@gmail.com",
+      "lozinka": "anaana",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "ime": "test",
+      "prezime": "testic",
+      "email": "test@test.test",
+      "lozinka": "test123",
+      "role": "user",
+      "id": 3
     }
   ],
   "telefoni": [
