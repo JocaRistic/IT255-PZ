@@ -33,11 +33,63 @@
       "dijagonala_ekrana": "6.8",
       "ram": "12 GB",
       "memorija": "do 128 GB",
-      "kamera": "108+10+12 MP + 10MP / 40 MP",
+      "kamera": "108 Mpix + 10 Mpix + 12 Mpix + 10 Mpix / 40 Mpix",
       "baterija": "5000 mAh",
-      "rezolucija": "3200x1440",
-      "cena": 119.999,
-      "slika": "https://images.prismic.io/esis/ed9d3435-006a-4998-81b7-1801894c0c4f_SM-G998BZKHEUC.png?auto=compress,format&rect=0,0,800,600&w=800&h=600"
+      "rezolucija": "3200 x 1440",
+      "cena": 89.999,
+      "slika": "https://cdn2.mobilnisvet.com/RMaNejqzrhXLcFmBGzrk_2MCSUJJfSS5q-JlZbAeIU4/sm:1/sh:1/el:0/q:85/wm:0.2:re:0:0:0.5/rs:fill:360:781/czM6Ly9tb2JpbG5pc3ZldGNvbS8yMDIxLzEvMTI3LzdtOWpscnl2NGtkdzJtbWYyZDVrLzIvdGYucG5n.webp"
+    },
+    {
+      "id": 2,
+      "brend": "APPLE",
+      "model": "Iphone 14 Plus",
+      "dijagonala_ekrana": "6.7",
+      "ram": "6 GB",
+      "memorija": "128 GB",
+      "kamera": "12 Mpix + 12 Mpix / 12 Mpix",
+      "baterija": "4323 mAh",
+      "rezolucija": "2778 x 1284",
+      "cena": 139.999,
+      "slika": "https://cdn2.mobilnisvet.com/J4wRfXMDLtCtLKpvvn7FC91_fbi2CHRPvfYXsMIho2A/sm:1/sh:1/el:0/q:85/wm:0.2:re:0:0:0.5/rs:fill:360:731/czM6Ly9tb2JpbG5pc3ZldGNvbS8yMDIyLzEvMTI3L2Jrc2NsYzh3NWhnYzgwNDd4bHd6LzIvdGYucG5n.webp"
+    },
+    {
+      "id": 3,
+      "brend": "Samsung",
+      "model": "Galaxy S22 Ultra 256GB",
+      "dijagonala_ekrana": "6.8",
+      "ram": "12 GB",
+      "memorija": "256 GB",
+      "kamera": "108 Mpix + 12 Mpix + 10 Mpix + 10 Mpix / 40 Mpix",
+      "baterija": "5000 mAh",
+      "rezolucija": "3040 x 1440",
+      "cena": 134.999,
+      "slika": "https://cdn2.mobilnisvet.com/duKngX2smouUQqtBfW1PCs2QDvm743tX69dXKCIpwFI/sm:1/sh:1/el:0/q:85/wm:0.2:re:0:0:0.5/rs:fill:360:751/czM6Ly9tb2JpbG5pc3ZldGNvbS8yMDIyLzEvMTI3LzAwOW1yaHJwN2g2OW0wNDVybjV4LzIvdGYucG5n.webp"
+    },
+    {
+      "id": 4,
+      "brend": "Xiaomi",
+      "model": "12T Pro 8/256GB Blue",
+      "dijagonala_ekrana": "6.67",
+      "ram": "8 GB",
+      "memorija": "256 GB",
+      "kamera": "200 Mpix + 8 Mpix + 2 Mpix + 2 Mpix / 20 Mpix",
+      "baterija": "5000 mAh",
+      "rezolucija": "2712 x 1220",
+      "cena": 86.999,
+      "slika": "https://cdn2.mobilnisvet.com/OLxMOXy2lBTq7HIrfQpP3ToiTQOyO_6ctYwxMNVSwuk/sm:1/sh:1/el:0/q:85/wm:0.2:re:0:0:0.5/rs:fill:360:768/czM6Ly9tb2JpbG5pc3ZldGNvbS8yMDIyLzEvMTI3Lzc3eXA4czRubmYyaDMyMmc1cmg0LzIvdGYucG5n.webp"
+    },
+{
+      "id": 5,
+      "brend": "Huawei",
+      "model": "P50 Pro 256GB Black",
+      "dijagonala_ekrana": "6.6",
+      "ram": "8 GB",
+      "memorija": "256 GB",
+      "kamera": "64 Mpix + 2 Mpix + 2 Mpix / 13 Mpix",
+      "baterija": "4360 mAh",
+      "rezolucija": "2700 x 1228",
+      "cena": 99.999,
+      "slika": "https://cdn2.mobilnisvet.com/oQK4IKiyFCK2btj9J2F8YoV8Qxu_zZyXG61BsD-SauM/sm:1/sh:1/el:0/q:85/wm:0.2:re:0:0:0.5/rs:fill:360:779/czM6Ly9tb2JpbG5pc3ZldGNvbS8yMDIxLzEvMTI3L2wwNzEyMDJ4YnZzbnRtNmdmcjQ1LzIvdGYucG5n.webp"
     }
   ],
   "porudzbine": [

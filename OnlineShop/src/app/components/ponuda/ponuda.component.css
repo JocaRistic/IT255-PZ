@@ -1,0 +1,21 @@
+.card-title{
+    margin: 0;
+}
+
+h2{
+    margin-bottom: 50px;
+}
+
+#ponuda img{
+    margin: 0px auto;
+    margin-top: 15px;
+    height: 300px;
+    width: 150px;
+}
+
+.cena{
+    text-align: center;
+    margin-top: 15px;
+    font-size: larger;
+    font-weight: bolder;
+}

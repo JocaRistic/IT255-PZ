@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { TelefonModel } from 'src/app/models/telefon.model';
 import { getTelefoni } from 'src/app/store/actions/telefon.actions';
-import { getTelefoniSelector } from 'src/app/store/selectors/telefon.selector';
+import { getTelefonById, getTelefoniSelector } from 'src/app/store/selectors/telefon.selector';
 import { AppState } from 'src/app/store/state/app.state';
 
 @Component({
@@ -12,7 +12,8 @@ import { AppState } from 'src/app/store/state/app.state';
   styleUrls: ['./ponuda.component.css']
 })
 export class PonudaComponent implements OnInit{
-  public telefoni$: Observable<TelefonModel[]>;
+
+  telefoni$: Observable<TelefonModel[]>;
 
   constructor(private store: Store<AppState>){
   }

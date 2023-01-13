@@ -1,1 +1,22 @@
-<p>ponuda works!</p>
+<section id="ponuda" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Ponuda telefona</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col" *ngFor="let telefon of telefoni$ | async">
+                <div class="card h-100">
+                    <img src="{{ telefon.slika }}" class="card-img-top" alt="Slika nije ucitana">
+                    <div class="card-body">
+                        <h6 class="card-title text-center">{{ telefon.brend }}</h6>
+                        <h5 class="card-title text-center">{{ telefon.model }}</h5>
+                        <hr>
+                        <p class="cena">{{ telefon.cena }} RSD</p>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-dark btn-sm">Detalji</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>    
