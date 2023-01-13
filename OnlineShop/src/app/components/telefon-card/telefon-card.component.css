@@ -1,0 +1,22 @@
+#telefon-card .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#telefon-card .card {
+    width: 800px;
+    background-color: rgb(240, 240, 240);
+}
+
+#telefon-card .card img {
+    margin: 15px;
+    height: 500px;
+    width: 250px;
+}
+
+.card-body p span{
+    font-weight: 500;
+}
+

@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { TelefonModel } from 'src/app/models/telefon.model';
 import { getTelefoni } from 'src/app/store/actions/telefon.actions';
-import { getTelefonById, getTelefoniSelector } from 'src/app/store/selectors/telefon.selector';
+import { getTelefoniSelector } from 'src/app/store/selectors/telefon.selector';
 import { AppState } from 'src/app/store/state/app.state';
 
 @Component({

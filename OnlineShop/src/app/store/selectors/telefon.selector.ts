@@ -1,4 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { TelefonModel } from "src/app/models/telefon.model";
 import { TelefonState } from "../state/telefon.state";
 
 const getTelefonState = createFeatureSelector<TelefonState>('telefon');
@@ -12,9 +13,9 @@ export const getTelefoniSelector = createSelector(
 )
 
 //selector selektuje samo telefon ciji id se poklapa sa trazenim
-export const getTelefonById = createSelector(
+export const getTelefonByIdSelector = createSelector(
     getTelefonState,
     (state: TelefonState, id: number) => {
-        return state.telefoni.find((telefon) => telefon.id === id);
+        return state.telefoni.find((telefon) => telefon.id == id);
     }
 );

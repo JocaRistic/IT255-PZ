@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit{
     const lozinka = this.loginForma.controls['lozinka'].value;
 
     this._authService.login(email, lozinka);
+
+    return false;
   }
 
 }

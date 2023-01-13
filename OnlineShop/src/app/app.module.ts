@@ -17,6 +17,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { TelefonEffect } from './store/effects/telefon.effects';
 import { appReducers } from './store/state/app.state';
+import { TelefonCardComponent } from './components/telefon-card/telefon-card.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
+import { PorucivanjeComponent } from './components/porucivanje/porucivanje.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { appReducers } from './store/state/app.state';
     PocetnaComponent,
     PonudaComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TelefonCardComponent,
+    PorucivanjeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,12 @@ import { appReducers } from './store/state/app.state';
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([TelefonEffect])
   ],
-  providers: [KorisnikService, AuthService, TelefonService],
+  providers: [
+    KorisnikService, 
+    AuthService, 
+    TelefonService,
+    LoggedInGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
