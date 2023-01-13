@@ -12,6 +12,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { KorisnikService } from './services/korisnik.service';
 import { AuthService } from './services/auth.service';
+import { TelefonService } from './services/telefon.service';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { TelefonEffect } from './store/effects/telefon.effects';
+import { appReducers } from './store/state/app.state';
 
 @NgModule({
   declarations: [
@@ -26,9 +31,11 @@ import { AuthService } from './services/auth.service';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot([TelefonEffect])
   ],
-  providers: [KorisnikService, AuthService],
+  providers: [KorisnikService, AuthService, TelefonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
