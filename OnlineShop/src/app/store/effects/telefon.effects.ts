@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { map, mergeMap } from "rxjs/operators";
 import { TelefonService } from "src/app/services/telefon.service";
-import { addTelefon, addTelefonSuccess, getTelefoni, getTelefoniSuccess } from "../actions/telefon.actions";
+import { addTelefon, addTelefonSuccess, deleteTelefon, deleteTelefonSuccess, getTelefoni, getTelefoniSuccess } from "../actions/telefon.actions";
 
 @Injectable()
 export class TelefonEffect {
@@ -36,5 +36,18 @@ export class TelefonEffect {
         );
     }
     );
+
+    deleteTelefon$ = createEffect(() => {
+        return this.actions$.pipe(
+            ofType(deleteTelefon),
+            mergeMap((action) => {
+                return this._telefonService.deleteTelefon(action.id).pipe(
+                    map((data) => {
+                        return deleteTelefonSuccess({ id: data.id });
+                    })
+                )
+            })
+        )
+    })
 
 }
