@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { getTelefoniSuccess } from "../actions/telefon.actions";
+import { addTelefonSuccess, getTelefoniSuccess } from "../actions/telefon.actions";
 import { initialTelefonState } from "../state/telefon.state";
 
 const _telefonReducer = createReducer(
@@ -9,6 +9,13 @@ const _telefonReducer = createReducer(
             ...state,
             telefoni: action.telefoni,
         }
+    }),
+    on(addTelefonSuccess, (state, action) => {
+        let telefon = { ...action.telefon };
+        return {
+            ...state,
+            telefoni: [...state.telefoni, telefon],
+        };
     })
 )
 

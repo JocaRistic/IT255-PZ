@@ -20,6 +20,8 @@ import { appReducers } from './store/state/app.state';
 import { TelefonCardComponent } from './components/telefon-card/telefon-card.component';
 import { LoggedInGuard } from './guards/logged-in.guard';
 import { PorucivanjeComponent } from './components/porucivanje/porucivanje.component';
+import { DodajTelefonComponent } from './components/admin/dodaj-telefon/dodaj-telefon.component';
+import { AdminLoggedInGuard } from './guards/admin-logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { PorucivanjeComponent } from './components/porucivanje/porucivanje.compo
     LoginComponent,
     RegisterComponent,
     TelefonCardComponent,
-    PorucivanjeComponent
+    PorucivanjeComponent,
+    DodajTelefonComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { PorucivanjeComponent } from './components/porucivanje/porucivanje.compo
     KorisnikService, 
     AuthService, 
     TelefonService,
-    LoggedInGuard
+    LoggedInGuard,
+    AdminLoggedInGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -8,7 +8,8 @@ import { KorisnikService } from './korisnik.service';
 })
 export class AuthService {
 
-  public prijavljenKorisnik: any = null;
+  private prijavljenKorisnik: any = null;
+  private isAdmin: boolean = false;
 
   constructor(private _korisnikService: KorisnikService, private router: Router) { }
 
@@ -24,6 +25,13 @@ export class AuthService {
       if(this.prijavljenKorisnik){
         // alert('Login je uspesan');
         localStorage.setItem('korisnik', JSON.stringify(this.prijavljenKorisnik));
+
+        if (this.prijavljenKorisnik.role === 'admin') {
+          this.isAdmin = true;
+        } else {
+          this.isAdmin = false;
+        }
+
         this.router.navigate(['/pocetna']);
       } else{
         this.prijavljenKorisnik = null;
@@ -37,6 +45,7 @@ export class AuthService {
   //brise item korisnik iz localStorage i prosledjuje nas na stranicu login
   logout(){
     this.prijavljenKorisnik = null;
+    this.isAdmin = false;
     localStorage.removeItem('korisnik');
     this.router.navigate(['/login']);
   }
@@ -60,6 +69,11 @@ export class AuthService {
   //odnosno da li u localStorage postoji korisnik
   isLoggedIn(): boolean {
     return this.getKorisnik() !== null;
+  }
+
+  //funkcija vraca true ukoliko je admin ulogovan, ukoliko je obican korisnik vraca false
+  adminLoggedIn(): boolean {
+    return this.isAdmin;
   }
 
 }

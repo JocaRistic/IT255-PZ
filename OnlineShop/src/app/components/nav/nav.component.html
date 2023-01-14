@@ -16,6 +16,9 @@
         <li class="nav-item" *ngIf="!isLogged">
           <a class="nav-link" [routerLink]="['/login']">Login</a>
         </li>
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link" [routerLink]="['/dodajtel']">Dodaj telefon</a>
+        </li>
       </ul>
       <div class="navbar-collapse collapse">
         <ul class="navbar-nav ms-auto">

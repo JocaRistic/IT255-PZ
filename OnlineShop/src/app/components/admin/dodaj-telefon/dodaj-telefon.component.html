@@ -1,0 +1,109 @@
+<section id="dodavanjeTelefona" class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Dodaj telefon</h1>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 forma">
+                <form [formGroup]="dodajTelefonForma" (ngSubmit)="dodajTel()">
+                    <div class="mb-3">
+                        <label for="brend" class="form-label">Brend telefona</label>
+                        <input type="text" class="form-control" id="brend" name="brend" formControlName="brend" [class.is-invalid]="dodajTelefonForma.controls['brend'].invalid && dodajTelefonForma.controls['brend'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['brend'].invalid && dodajTelefonForma.controls['brend'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['brend']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="model" class="form-label">Model telefona</label>
+                        <input type="text" class="form-control" id="model" name="model" formControlName="model" [class.is-invalid]="dodajTelefonForma.controls['model'].invalid && dodajTelefonForma.controls['model'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['model'].invalid && dodajTelefonForma.controls['model'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['model']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dijagonalaEkrana" class="form-label">Dijagonala ekrana</label>
+                        <input type="text" class="form-control" id="dijagonalaEkrana" name="dijagonalaEkrana" formControlName="dijagonalaEkrana" 
+                        [class.is-invalid]="dodajTelefonForma.controls['dijagonalaEkrana'].invalid && dodajTelefonForma.controls['dijagonalaEkrana'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['dijagonalaEkrana'].invalid && dodajTelefonForma.controls['dijagonalaEkrana'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['dijagonalaEkrana']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ram" class="form-label">RAM telefona</label>
+                        <input type="text" class="form-control" id="ram" name="ram" formControlName="ram" [class.is-invalid]="dodajTelefonForma.controls['ram'].invalid && dodajTelefonForma.controls['ram'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['ram'].invalid && dodajTelefonForma.controls['ram'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['ram']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="memorija" class="form-label">Memorija telefona</label>
+                        <input type="text" class="form-control" id="memorija" name="memorija" formControlName="memorija" [class.is-invalid]="dodajTelefonForma.controls['memorija'].invalid && dodajTelefonForma.controls['memorija'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['memorija'].invalid && dodajTelefonForma.controls['memorija'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['memorija']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="kamera" class="form-label">Kamera telefona</label>
+                        <input type="text" class="form-control" id="kamera" name="kamera" formControlName="kamera" [class.is-invalid]="dodajTelefonForma.controls['kamera'].invalid && dodajTelefonForma.controls['kamera'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['kamera'].invalid && dodajTelefonForma.controls['kamera'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['kamera']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="baterija" class="form-label">Baterija telefona</label>
+                        <input type="text" class="form-control" id="baterija" name="baterija" formControlName="baterija" [class.is-invalid]="dodajTelefonForma.controls['baterija'].invalid && dodajTelefonForma.controls['baterija'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['baterija'].invalid && dodajTelefonForma.controls['baterija'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['baterija']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rezolucija" class="form-label">Rezolucija ekrana</label>
+                        <input type="text" class="form-control" id="rezolucija" name="rezolucija" formControlName="rezolucija" [class.is-invalid]="dodajTelefonForma.controls['rezolucija'].invalid && dodajTelefonForma.controls['rezolucija'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['rezolucija'].invalid && dodajTelefonForma.controls['rezolucija'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['rezolucija']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cena" class="form-label">Cena telefona</label>
+                        <input type="text" class="form-control" id="cena" name="cena" formControlName="cena" [class.is-invalid]="dodajTelefonForma.controls['cena'].invalid && dodajTelefonForma.controls['cena'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['cena'].invalid && dodajTelefonForma.controls['cena'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['cena']).errors.pattern 
+                            || $any(dodajTelefonForma.controls['cena']).errors.required">
+                                Cena nije validna
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="slika" class="form-label">URL slike telefona</label>
+                        <input type="text" class="form-control" id="slika" name="slika" formControlName="slika" [class.is-invalid]="dodajTelefonForma.controls['slika'].invalid && dodajTelefonForma.controls['slika'].touched">
+                        <div *ngIf="dodajTelefonForma.controls['slika'].invalid && dodajTelefonForma.controls['slika'].touched" class="error-msg">
+                            <div *ngIf="$any(dodajTelefonForma.controls['slika']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" [disabled]="!dodajTelefonForma.valid">Dodaj telefon</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</section>
+

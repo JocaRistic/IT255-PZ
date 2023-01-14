@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DodajTelefonComponent } from './components/admin/dodaj-telefon/dodaj-telefon.component';
 import { LoginComponent } from './components/login/login.component';
 import { PocetnaComponent } from './components/pocetna/pocetna.component';
 import { PonudaComponent } from './components/ponuda/ponuda.component';
 import { PorucivanjeComponent } from './components/porucivanje/porucivanje.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TelefonCardComponent } from './components/telefon-card/telefon-card.component';
+import { AdminLoggedInGuard } from './guards/admin-logged-in.guard';
 import { LoggedInGuard } from './guards/logged-in.guard';
 
 const routes: Routes = [
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'telefon/:id', component: TelefonCardComponent},
-  {path: 'poruci/:id', component: PorucivanjeComponent, canActivate: [LoggedInGuard]}
+  {path: 'poruci/:id', component: PorucivanjeComponent, canActivate: [LoggedInGuard]},
+  {path: 'dodajtel', component: DodajTelefonComponent, canActivate: [AdminLoggedInGuard]}
 ];
 
 @NgModule({

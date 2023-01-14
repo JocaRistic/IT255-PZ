@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavComponent implements DoCheck{
 
   isLogged: boolean;
+  isAdmin: boolean;
 
   constructor(private _authService: AuthService){
 
@@ -16,6 +17,7 @@ export class NavComponent implements DoCheck{
 
   ngDoCheck(): void {
     this.isLogged = this._authService.isLoggedIn();
+    this.isAdmin = this._authService.adminLoggedIn();
   }
 
   logout(){
