@@ -23,6 +23,8 @@ import { PorucivanjeComponent } from './components/porucivanje/porucivanje.compo
 import { DodajTelefonComponent } from './components/admin/dodaj-telefon/dodaj-telefon.component';
 import { AdminLoggedInGuard } from './guards/admin-logged-in.guard';
 import { UpdateTelefonComponent } from './components/admin/update-telefon/update-telefon.component';
+import { PorudzbinaService } from './services/porudzbina.service';
+import { PorudzbinaEffect } from './store/effects/porudzbina.effects';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,13 @@ import { UpdateTelefonComponent } from './components/admin/update-telefon/update
     ReactiveFormsModule,
     HttpClientModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([TelefonEffect])
+    EffectsModule.forRoot([TelefonEffect, PorudzbinaEffect])
   ],
   providers: [
     KorisnikService, 
     AuthService, 
     TelefonService,
+    PorudzbinaService,
     LoggedInGuard,
     AdminLoggedInGuard
   ],

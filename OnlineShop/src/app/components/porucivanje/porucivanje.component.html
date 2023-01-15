@@ -1,1 +1,89 @@
-<p>porucivanje works!</p>
+<section id="porucivanje" class="py-5">
+    <div class="container-fluid">
+        <div *ngIf="poruceno" class="row">
+            <h1 class="text-center">Uspesno poruceno</h1>
+            <div class="col-md-3"></div>
+            <div class="col-md-6 forma">
+                <div class="potvrda">
+                    <p>
+                        Postovani, uspesno je napravljena porudzbina sa sledecim podacima.<br>
+                    </p>
+                    <hr>
+                    <p>Kupac</p>
+                    <hr>
+                    <p>
+                        Ime: {{ korisnik.ime }}<br>
+                        Prezime: {{ korisnik.prezime }}<br>
+                        E-mail: {{ korisnik.email }}<br>
+                        Broj telefona: {{ porudzbina.brojTelefona }}<br>
+                        Adresa dostave: {{ porudzbina.adresaDostave }}<br>
+                        Postanski broj: {{ porudzbina.postanskiBroj }}<br>
+                    </p>
+                    <hr>
+                    <p>Poruceni telefon</p>
+                    <hr>
+                    <p>
+                        Brend telefona: {{ telefon.brend }}<br>
+                        Model telefona: {{ telefon.model }}<br>
+                        Ram telefona: {{ telefon.ram }}<br>
+                        Memorija telefona: {{ telefon.memorija }}<br>
+                        Kamera telefona: {{ telefon.kamera }}<br>
+                        Baterija telefona: {{ telefon.baterija }}<br>
+                        Rezolucija ekrana: {{ telefon.rezolucija }}<br>
+                    </p>
+                    <hr>
+                    <p>
+                        Iznos za placanje je: {{ telefon.cena }} RSD.
+                    </p>
+                    <hr>
+                    <p>
+                        Uskoro ce Vas kontaktirati neko iz sluzbe radi potvrde porudzbine.<br>
+                        Srdacan pozdrav.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+        <div *ngIf="!poruceno" class="row">
+            <h1 class="text-center">Porucivanje</h1>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 forma">
+                <form [formGroup]="poruciForma" (ngSubmit)="poruci()">
+                    <div class="mb-3">
+                        <label for="adresa" class="form-label">Unesite adresu</label>
+                        <input type="text" class="form-control" id="adresa" name="adresa" formControlName="adresaDostave" [class.is-invalid]="poruciForma.controls['adresaDostave'].invalid && poruciForma.controls['adresaDostave'].touched">
+                        <div *ngIf="poruciForma.controls['adresaDostave'].invalid && poruciForma.controls['adresaDostave'].touched" class="error-msg">
+                            <div *ngIf="$any(poruciForma.controls['adresaDostave']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postanskiBroj" class="form-label">Unesite postanski broj</label>
+                        <input type="text" class="form-control" id="postanskiBroj" name="postanskiBroj" formControlName="postanskiBroj" [class.is-invalid]="poruciForma.controls['postanskiBroj'].invalid && poruciForma.controls['postanskiBroj'].touched">
+                        <div *ngIf="poruciForma.controls['postanskiBroj'].invalid && poruciForma.controls['postanskiBroj'].touched" class="error-msg">
+                            <div *ngIf="$any(poruciForma.controls['postanskiBroj']).errors.pattern ||
+                            $any(poruciForma.controls['postanskiBroj']).errors.required">
+                                Postanski broj nije validan
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="mb-3">
+                        <label for="brojTelefona" class="form-label">Unesite broj telefona</label>
+                        <input type="text" class="form-control" id="brojTelefona" name="brojTelefona" formControlName="brojTelefona" [class.is-invalid]="poruciForma.controls['brojTelefona'].invalid && poruciForma.controls['brojTelefona'].touched">
+                        <div *ngIf="poruciForma.controls['brojTelefona'].invalid && poruciForma.controls['brojTelefona'].touched" class="error-msg">
+                            <div *ngIf="$any(poruciForma.controls['brojTelefona']).errors.pattern ||
+                            $any(poruciForma.controls['brojTelefona']).errors.required">
+                                Broj telefona nije validan
+                            </div>
+                        </div>    
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" [disabled]="!poruciForma.valid">Poruci</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+</section>

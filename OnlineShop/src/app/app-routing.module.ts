@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'telefon/:id', component: TelefonCardComponent},
-  {path: 'poruci/:id', component: PorucivanjeComponent, canActivate: [LoggedInGuard]},
+  {path: 'poruci/:idTelefona', component: PorucivanjeComponent, canActivate: [LoggedInGuard]},
   {path: 'dodajtel', component: DodajTelefonComponent, canActivate: [AdminLoggedInGuard]},
   {path: 'updatetel/:id', component: UpdateTelefonComponent, canActivate: [AdminLoggedInGuard]}
 ];

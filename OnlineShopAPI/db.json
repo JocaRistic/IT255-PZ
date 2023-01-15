@@ -103,11 +103,19 @@
   "porudzbine": [
     {
       "id": 1,
-      "korisnik_id": 1,
-      "telefon_id": 1,
-      "adresa_dostave": "Leskovac",
-      "postanski_broj": 16000,
-      "broj_telefona": "064324324"
+      "korisnikId": 1,
+      "telefonId": 1,
+      "adresaDostave": "Leskovac",
+      "postanskiBroj": 16000,
+      "brojTelefona": "064324324"
+    },
+    {
+      "korisnikId": 3,
+      "telefonId": 5,
+      "adresaDostave": "Leskovac",
+      "postanskiBroj": "16000",
+      "brojTelefona": "0632432433",
+      "id": 2
     }
   ]
 }

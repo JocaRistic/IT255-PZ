@@ -35,7 +35,7 @@ export class AuthService {
         this.router.navigate(['/pocetna']);
       } else{
         this.prijavljenKorisnik = null;
-        alert("Login nije uspesan");
+        alert("Uneti podaci nisu validni");
       }
 
     })
