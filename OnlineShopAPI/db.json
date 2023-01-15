@@ -23,6 +23,14 @@
       "lozinka": "test123",
       "role": "user",
       "id": 3
+    },
+    {
+      "ime": "sadfd",
+      "prezime": "dfas",
+      "email": "sad@gmail.com",
+      "lozinka": "123123",
+      "role": "user",
+      "id": 4
     }
   ],
   "telefoni": [

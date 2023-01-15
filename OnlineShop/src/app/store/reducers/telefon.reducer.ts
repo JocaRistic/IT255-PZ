@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { addTelefonSuccess, deleteTelefonSuccess, getTelefoniSuccess } from "../actions/telefon.actions";
+import { addTelefonSuccess, deleteTelefonSuccess, getTelefoniSuccess, updateTelefonSuccess } from "../actions/telefon.actions";
 import { initialTelefonState } from "../state/telefon.state";
 
 const _telefonReducer = createReducer(
@@ -26,6 +26,16 @@ const _telefonReducer = createReducer(
             ...state,
             telefoni: updatedTelefoni,
         };
+    }),
+    on(updateTelefonSuccess, (state, action) => {
+        const updatedTelefoni = state.telefoni.map((telefon) => {
+            return action.telefon.id === telefon.id ? action.telefon : telefon;
+        });
+
+        return {
+            ...state,
+            telefoni: updatedTelefoni,
+        }
     })
 )
 

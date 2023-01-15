@@ -1,0 +1,109 @@
+<section id="dodavanjeTelefona" class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Update telefon</h1>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 forma">
+                <form [formGroup]="updateTelefonForma" (ngSubmit)="updateTel()">
+                    <div class="mb-3">
+                        <label for="brend" class="form-label">Brend telefona</label>
+                        <input type="text" class="form-control" id="brend" name="brend" formControlName="brend" [class.is-invalid]="updateTelefonForma.controls['brend'].invalid && updateTelefonForma.controls['brend'].touched">
+                        <div *ngIf="updateTelefonForma.controls['brend'].invalid && updateTelefonForma.controls['brend'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['brend']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="model" class="form-label">Model telefona</label>
+                        <input type="text" class="form-control" id="model" name="model" formControlName="model" [class.is-invalid]="updateTelefonForma.controls['model'].invalid && updateTelefonForma.controls['model'].touched">
+                        <div *ngIf="updateTelefonForma.controls['model'].invalid && updateTelefonForma.controls['model'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['model']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dijagonalaEkrana" class="form-label">Dijagonala ekrana</label>
+                        <input type="text" class="form-control" id="dijagonalaEkrana" name="dijagonalaEkrana" formControlName="dijagonalaEkrana" 
+                        [class.is-invalid]="updateTelefonForma.controls['dijagonalaEkrana'].invalid && updateTelefonForma.controls['dijagonalaEkrana'].touched">
+                        <div *ngIf="updateTelefonForma.controls['dijagonalaEkrana'].invalid && updateTelefonForma.controls['dijagonalaEkrana'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['dijagonalaEkrana']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ram" class="form-label">RAM telefona</label>
+                        <input type="text" class="form-control" id="ram" name="ram" formControlName="ram" [class.is-invalid]="updateTelefonForma.controls['ram'].invalid && updateTelefonForma.controls['ram'].touched">
+                        <div *ngIf="updateTelefonForma.controls['ram'].invalid && updateTelefonForma.controls['ram'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['ram']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="memorija" class="form-label">Memorija telefona</label>
+                        <input type="text" class="form-control" id="memorija" name="memorija" formControlName="memorija" [class.is-invalid]="updateTelefonForma.controls['memorija'].invalid && updateTelefonForma.controls['memorija'].touched">
+                        <div *ngIf="updateTelefonForma.controls['memorija'].invalid && updateTelefonForma.controls['memorija'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['memorija']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="kamera" class="form-label">Kamera telefona</label>
+                        <input type="text" class="form-control" id="kamera" name="kamera" formControlName="kamera" [class.is-invalid]="updateTelefonForma.controls['kamera'].invalid && updateTelefonForma.controls['kamera'].touched">
+                        <div *ngIf="updateTelefonForma.controls['kamera'].invalid && updateTelefonForma.controls['kamera'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['kamera']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="baterija" class="form-label">Baterija telefona</label>
+                        <input type="text" class="form-control" id="baterija" name="baterija" formControlName="baterija" [class.is-invalid]="updateTelefonForma.controls['baterija'].invalid && updateTelefonForma.controls['baterija'].touched">
+                        <div *ngIf="updateTelefonForma.controls['baterija'].invalid && updateTelefonForma.controls['baterija'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['baterija']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rezolucija" class="form-label">Rezolucija ekrana</label>
+                        <input type="text" class="form-control" id="rezolucija" name="rezolucija" formControlName="rezolucija" [class.is-invalid]="updateTelefonForma.controls['rezolucija'].invalid && updateTelefonForma.controls['rezolucija'].touched">
+                        <div *ngIf="updateTelefonForma.controls['rezolucija'].invalid && updateTelefonForma.controls['rezolucija'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['rezolucija']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cena" class="form-label">Cena telefona</label>
+                        <input type="text" class="form-control" id="cena" name="cena" formControlName="cena" [class.is-invalid]="updateTelefonForma.controls['cena'].invalid && updateTelefonForma.controls['cena'].touched">
+                        <div *ngIf="updateTelefonForma.controls['cena'].invalid && updateTelefonForma.controls['cena'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['cena']).errors.pattern 
+                            || $any(updateTelefonForma.controls['cena']).errors.required">
+                                Cena nije validna
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="slika" class="form-label">URL slike telefona</label>
+                        <input type="text" class="form-control" id="slika" name="slika" formControlName="slika" [class.is-invalid]="updateTelefonForma.controls['slika'].invalid && updateTelefonForma.controls['slika'].touched">
+                        <div *ngIf="updateTelefonForma.controls['slika'].invalid && updateTelefonForma.controls['slika'].touched" class="error-msg">
+                            <div *ngIf="$any(updateTelefonForma.controls['slika']).errors.required">
+                                Polje je obavezno
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" [disabled]="!updateTelefonForma.valid">Update telefon</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</section>
+

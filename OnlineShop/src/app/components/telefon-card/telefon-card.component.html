@@ -22,6 +22,9 @@
                         <div class="text-center">
                             <button type="submit" class="btn btn-dark"
                             [routerLink]="['/poruci', telefon.id]">Poruci odmah</button>
+                            <button type="submit" class="btn btn-danger" style="margin-left: 5px;"
+                            *ngIf="(_authService.adminLoggedIn())"
+                            [routerLink]="['/updatetel', telefon.id]">Update telefon</button>
                             <p *ngIf="!(_authService.isLoggedIn())" class="error-msg">Da biste porucili morate biti ulogovani!</p>
                         </div>
                     </div>

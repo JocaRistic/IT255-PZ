@@ -22,6 +22,7 @@ import { LoggedInGuard } from './guards/logged-in.guard';
 import { PorucivanjeComponent } from './components/porucivanje/porucivanje.component';
 import { DodajTelefonComponent } from './components/admin/dodaj-telefon/dodaj-telefon.component';
 import { AdminLoggedInGuard } from './guards/admin-logged-in.guard';
+import { UpdateTelefonComponent } from './components/admin/update-telefon/update-telefon.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AdminLoggedInGuard } from './guards/admin-logged-in.guard';
     RegisterComponent,
     TelefonCardComponent,
     PorucivanjeComponent,
-    DodajTelefonComponent
+    DodajTelefonComponent,
+    UpdateTelefonComponent
   ],
   imports: [
     BrowserModule,

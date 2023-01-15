@@ -31,4 +31,9 @@ export class TelefonService {
   public deleteTelefon(id?: number): Observable<TelefonModel>{
     return this._http.delete<TelefonModel>(this.baseUrl + '/' + id);
   }
+
+  //funkcija vrsi update nekog telefona
+  public updateTelefon(telefon: TelefonModel): Observable<TelefonModel>{
+    return this._http.patch<TelefonModel>(this.baseUrl + '/' + telefon.id, telefon);
+  }
 }

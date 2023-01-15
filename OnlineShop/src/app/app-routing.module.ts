@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DodajTelefonComponent } from './components/admin/dodaj-telefon/dodaj-telefon.component';
+import { UpdateTelefonComponent } from './components/admin/update-telefon/update-telefon.component';
 import { LoginComponent } from './components/login/login.component';
 import { PocetnaComponent } from './components/pocetna/pocetna.component';
 import { PonudaComponent } from './components/ponuda/ponuda.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'telefon/:id', component: TelefonCardComponent},
   {path: 'poruci/:id', component: PorucivanjeComponent, canActivate: [LoggedInGuard]},
-  {path: 'dodajtel', component: DodajTelefonComponent, canActivate: [AdminLoggedInGuard]}
+  {path: 'dodajtel', component: DodajTelefonComponent, canActivate: [AdminLoggedInGuard]},
+  {path: 'updatetel/:id', component: UpdateTelefonComponent, canActivate: [AdminLoggedInGuard]}
 ];
 
 @NgModule({
