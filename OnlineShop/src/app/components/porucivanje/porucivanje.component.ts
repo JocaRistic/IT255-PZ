@@ -54,7 +54,7 @@ export class PorucivanjeComponent implements OnInit{
     const postanskiBroj = this.poruciForma.get('postanskiBroj')?.value;
     const brojTelefona = this.poruciForma.get('brojTelefona')?.value;
 
-    this.porudzbina = new PorudzbinaModel(adresaDostave, postanskiBroj, brojTelefona, this.korisnik.id, this.telefon.id);
+    this.porudzbina = new PorudzbinaModel(adresaDostave, postanskiBroj, brojTelefona, 'na cekanju', this.korisnik.id, this.telefon.id);
 
     this.store.dispatch(addPorudzbina({ porudzbina: this.porudzbina }));
     this.poruceno = true;

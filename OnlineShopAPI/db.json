@@ -102,19 +102,21 @@
   ],
   "porudzbine": [
     {
-      "id": 1,
       "korisnikId": 1,
-      "telefonId": 1,
+      "telefonId": 2,
       "adresaDostave": "Leskovac",
-      "postanskiBroj": 16000,
-      "brojTelefona": "064324324"
+      "postanskiBroj": "16000",
+      "brojTelefona": "0612323232",
+      "stanje": "isporuceno",
+      "id": 1
     },
     {
       "korisnikId": 3,
-      "telefonId": 5,
-      "adresaDostave": "Leskovac",
-      "postanskiBroj": "16000",
-      "brojTelefona": "0632432433",
+      "telefonId": 4,
+      "adresaDostave": "Beograd",
+      "postanskiBroj": "18000",
+      "brojTelefona": "0678978978",
+      "stanje": "na cekanju",
       "id": 2
     }
   ]

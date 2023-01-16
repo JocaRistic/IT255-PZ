@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DodajTelefonComponent } from './components/admin/dodaj-telefon/dodaj-telefon.component';
+import { PregledPorudzbinaComponent } from './components/admin/pregled-porudzbina/pregled-porudzbina.component';
 import { UpdateTelefonComponent } from './components/admin/update-telefon/update-telefon.component';
 import { LoginComponent } from './components/login/login.component';
 import { PocetnaComponent } from './components/pocetna/pocetna.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'telefon/:id', component: TelefonCardComponent},
   {path: 'poruci/:idTelefona', component: PorucivanjeComponent, canActivate: [LoggedInGuard]},
   {path: 'dodajtel', component: DodajTelefonComponent, canActivate: [AdminLoggedInGuard]},
-  {path: 'updatetel/:id', component: UpdateTelefonComponent, canActivate: [AdminLoggedInGuard]}
+  {path: 'updatetel/:id', component: UpdateTelefonComponent, canActivate: [AdminLoggedInGuard]},
+  {path: 'porudzbine', component: PregledPorudzbinaComponent, canActivate: [AdminLoggedInGuard]}
 ];
 
 @NgModule({

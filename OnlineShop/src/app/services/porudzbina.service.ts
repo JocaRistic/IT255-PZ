@@ -21,4 +21,15 @@ export class PorudzbinaService {
   public addPorudzbina(porudzbina: PorudzbinaModel): Observable<PorudzbinaModel> {
     return this._http.post<PorudzbinaModel>(this.baseUrl, porudzbina);
   }
+
+  //brisanje porudzbine iz baze za uneti id
+  public deletePorudzbina(id?: number): Observable<PorudzbinaModel>{
+    return this._http.delete<PorudzbinaModel>(this.baseUrl + '/' + id);
+  }
+
+  //funkcija vrsi update neke porudzbine
+  public updatePorudzbina(porudzbina: PorudzbinaModel): Observable<PorudzbinaModel>{
+    return this._http.patch<PorudzbinaModel>(this.baseUrl + '/' + porudzbina.id, porudzbina);
+  }
+
 }

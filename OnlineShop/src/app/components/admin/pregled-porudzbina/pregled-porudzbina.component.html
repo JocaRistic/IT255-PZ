@@ -1,0 +1,43 @@
+<section id="porudzbine-list" class="py-5">
+    <div class="container-fluid">
+        <h1 class="text-center">Sve porudzbine</h1>
+        <div class="row">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Kupac</th>
+                    <th scope="col">Email kupca</th>
+                    <th scope="col">Broj telefona</th>
+                    <th scope="col">Adresa dostave</th>
+                    <th scope="col">Postanski broj</th>
+                    <th scope="col">Poruceno</th>
+                    <th scope="col">Cena (RSD)</th>
+                    <th scope="col">Stanje</th>
+                    <th scope="col">Akcije</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr [class.table-info]="porudzbina.stanje === 'isporuceno'" *ngFor="let porudzbina of porudzbine">
+                    <th scope="row"> {{ porudzbina.id }}</th>
+                    <td>{{ getKupac(porudzbina.korisnikId)?.ime }} {{ getKupac(porudzbina.korisnikId)?.prezime }}</td>
+                    <td>{{ getKupac(porudzbina.korisnikId)?.email }}</td>
+                    <td>{{ porudzbina.brojTelefona }}</td>
+                    <td>{{ porudzbina.adresaDostave }}</td>
+                    <td>{{ porudzbina.postanskiBroj }}</td>
+                    <td>{{ getTelefon(porudzbina.telefonId)?.model }}</td>
+                    <td>{{ getTelefon(porudzbina.telefonId)?.cena }}</td>
+                    <td>{{ porudzbina.stanje }}</td>
+                    <td>
+                      <button type="submit" class="btn btn-danger btn-sm" 
+                      (click)="obrisiPorudzbinu(porudzbina.id)">Obrisi</button>
+                      <button type="submit" class="btn btn-warning btn-sm" style="margin-left: 5px;"
+                      (click)="azurirajPorudzbinu(porudzbina)">
+                      Isporuceno</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</section>

@@ -25,6 +25,7 @@ import { AdminLoggedInGuard } from './guards/admin-logged-in.guard';
 import { UpdateTelefonComponent } from './components/admin/update-telefon/update-telefon.component';
 import { PorudzbinaService } from './services/porudzbina.service';
 import { PorudzbinaEffect } from './store/effects/porudzbina.effects';
+import { PregledPorudzbinaComponent } from './components/admin/pregled-porudzbina/pregled-porudzbina.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PorudzbinaEffect } from './store/effects/porudzbina.effects';
     TelefonCardComponent,
     PorucivanjeComponent,
     DodajTelefonComponent,
-    UpdateTelefonComponent
+    UpdateTelefonComponent,
+    PregledPorudzbinaComponent
   ],
   imports: [
     BrowserModule,

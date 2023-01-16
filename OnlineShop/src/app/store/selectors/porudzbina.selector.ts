@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { PorudzbinaState } from "../state/porudzbina.state";
 
-const getPorudzbinaState = createFeatureSelector<PorudzbinaState>('porudzbine');
+const getPorudzbinaState = createFeatureSelector<PorudzbinaState>('porudzbina');
 
 //selektor selektuje sve porudzbine
 export const getPorudzbineSelector = createSelector(

@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { map, mergeMap } from "rxjs";
 import { PorudzbinaService } from "src/app/services/porudzbina.service";
-import { addPorudzbina, addPorudzbinaSuccess, getPorudzbine, getPorudzbineSuccess } from "../actions/porudzbina.actions";
+import { addPorudzbina, addPorudzbinaSuccess, deletePorudzbina, deletePorudzbinaSuccess, getPorudzbine, getPorudzbineSuccess, updatePorudzbina, updatePorudzbinaSuccess } from "../actions/porudzbina.actions";
 
 @Injectable()
 export class PorudzbinaEffect {
@@ -23,7 +23,7 @@ export class PorudzbinaEffect {
         );
     });
 
-    addTelefon$ = createEffect(() => {
+    addPorudzbina$ = createEffect(() => {
         return this.actions$.pipe(
             ofType(addPorudzbina),
             mergeMap((action) => {
@@ -35,7 +35,32 @@ export class PorudzbinaEffect {
                 );
             })
         );
-    }
-    );
+    });
+
+    deletePorudzbina$ = createEffect(() => {
+        return this.actions$.pipe(
+            ofType(deletePorudzbina),
+            mergeMap((action) => {
+                return this._porudzbinaService.deletePorudzbina(action.id).pipe(
+                    map((data) => {
+                        return deletePorudzbinaSuccess({ id: data.id });
+                    })
+                );
+            })
+        );
+    });
+
+    updatePorudzbina$ = createEffect(() => {
+        return this.actions$.pipe(
+            ofType(updatePorudzbina),
+            mergeMap((action) => {
+                return this._porudzbinaService.updatePorudzbina(action.porudzbina).pipe(
+                    map((data) => {
+                        return updatePorudzbinaSuccess({ porudzbina: action.porudzbina });
+                    })
+                );
+            })
+        );
+    });
 
 }
