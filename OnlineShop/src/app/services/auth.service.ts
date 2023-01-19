@@ -55,7 +55,7 @@ export class AuthService {
   register(ime: string, prezime: string, email: string, lozinka: string){
     const korisnik = new KorisnikModel(ime, prezime, email, lozinka, 'user');
     this._korisnikService.addKorisnik(korisnik).subscribe((res) => {
-      alert('Uspesno ste se registrovali');
+      //alert('Uspesno ste se registrovali');
       this.router.navigate(['/login']);
     })
   }

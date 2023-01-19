@@ -1,0 +1,36 @@
+.slika{
+    /* background-image: linear-gradient(to top, rgb(255, 255, 255, 0.2), rgb(0, 0, 0)), url(/OnlineShop/src/assets/img/back.jpg); */
+    /* background-image: url(/OnlineShop/src/assets/img/back.jpg); */
+    background: linear-gradient(to top, rgb(255, 255, 255, 0.2), rgb(0, 0, 0)), url('https://images.pexels.com/photos/11490066/pexels-photo-11490066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 0;
+    text-align: center;
+    color: white;
+
+}
+
+.slika h2{
+    font-size: 60px;
+}
+.slika p{
+    font-size: 20px;
+}
+
+.carousel .carousel-item {
+    transition-duration: 1s;
+}
+
+.carousel .carousel-item img{
+    height: 500px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.opis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}

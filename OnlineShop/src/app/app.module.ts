@@ -26,6 +26,7 @@ import { UpdateTelefonComponent } from './components/admin/update-telefon/update
 import { PorudzbinaService } from './services/porudzbina.service';
 import { PorudzbinaEffect } from './store/effects/porudzbina.effects';
 import { PregledPorudzbinaComponent } from './components/admin/pregled-porudzbina/pregled-porudzbina.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PregledPorudzbinaComponent } from './components/admin/pregled-porudzbin
     PorucivanjeComponent,
     DodajTelefonComponent,
     UpdateTelefonComponent,
-    PregledPorudzbinaComponent
+    PregledPorudzbinaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

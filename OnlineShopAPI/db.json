@@ -17,20 +17,12 @@
       "id": 2
     },
     {
-      "ime": "test",
-      "prezime": "testic",
-      "email": "test@test.test",
-      "lozinka": "test123",
+      "ime": "Nikola",
+      "prezime": "Nikolic",
+      "email": "nikola@gmail.com",
+      "lozinka": "nikola",
       "role": "user",
-      "id": 3
-    },
-    {
-      "ime": "sadfd",
-      "prezime": "dfas",
-      "email": "sad@gmail.com",
-      "lozinka": "123123",
-      "role": "user",
-      "id": 4
+      "id": 5
     }
   ],
   "telefoni": [
@@ -111,13 +103,22 @@
       "id": 1
     },
     {
-      "korisnikId": 3,
-      "telefonId": 4,
+      "korisnikId": 2,
+      "telefonId": 1,
       "adresaDostave": "Beograd",
       "postanskiBroj": "18000",
-      "brojTelefona": "0678978978",
+      "brojTelefona": "0612342342",
       "stanje": "na cekanju",
-      "id": 2
+      "id": 4
+    },
+    {
+      "korisnikId": 5,
+      "telefonId": 5,
+      "adresaDostave": "Neka adresa",
+      "postanskiBroj": "23423",
+      "brojTelefona": "0617778889",
+      "stanje": "isporuceno",
+      "id": 5
     }
   ]
 }
